@@ -1,0 +1,10 @@
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\bin\Debug\csharp-simple-registration.exe.config
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\bin\Debug\csharp-simple-registration.exe
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\bin\Debug\csharp-simple-registration.pdb
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\obj\Debug\csharp-simple-registration.csproj.AssemblyReference.cache
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\obj\Debug\csharp_simple_registration.Form1.resources
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\obj\Debug\csharp_simple_registration.Properties.Resources.resources
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\obj\Debug\csharp-simple-registration.csproj.GenerateResource.cache
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\obj\Debug\csharp-simple-registration.csproj.CoreCompileInputs.cache
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\obj\Debug\csharp-simple-registration.exe
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\obj\Debug\csharp-simple-registration.pdb
