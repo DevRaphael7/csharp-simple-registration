@@ -45,7 +45,6 @@ namespace csharp_simple_registration
         public String getSenha() => this.senha;
         public String getCpf() => this.cpf;
 
-
-
+        
     }
 }

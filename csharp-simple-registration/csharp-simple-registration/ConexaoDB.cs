@@ -23,51 +23,76 @@ namespace csharp_simple_registration
         }
 
 
-        public bool buscaPeloBancoDeDados(string cmd, string nome, string senha)
+        public void buscaPeloBancoDeDados(string nome, string senha)
         {
-
-            bool consulta = false;
-
             try
             {
                 conexao = new MySqlConnection(this.db);
+                bool temporario = false;
 
                 Console.WriteLine("Conectando com o banco de dados...");
                 conexao.Open();
 
-                query = cmd;
-
                 comando = new MySqlCommand(query, conexao);
+                comando.Parameters.AddWithValue("@nome", nome);
+                comando.Parameters.AddWithValue("@senha", senha);
                 reader = comando.ExecuteReader();
 
                 while (reader.Read())
                 {
-                    Console.WriteLine(reader[0] + " " + reader[1] + " " + reader[2] + " " + reader[3]);
-
                     if (nome == reader[1].ToString() && senha == reader[2].ToString())
                     {
-                        consulta = true;
+                        MessageBox.Show("Conexão realizada com sucesso!", "Parabéns!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        temporario = true;
                     }
-                    else
-                    {
-                        consulta = false;
-                    }
+                }
+
+                if(temporario == false)
+                {
+                    MessageBox.Show("E-mail ou senha errados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
                 reader.Close();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao acessar banco de dados", "", MessageBoxButtons.OK);
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                Console.WriteLine("Finalizado.");
+            } 
+        }
+
+        public void inserirNovosRegistros(string nome, string senha, string cpf)
+        {
+            try
+            {
+                conexao = new MySqlConnection(this.db);
+              
+                Console.WriteLine("Conectando com o banco de dados...");
+                conexao.Open();
+
+                comando = new MySqlCommand(this.query, conexao);
+                
+                comando.Parameters.AddWithValue("@NOME", nome);
+                comando.Parameters.AddWithValue("@SENHA", senha);
+                comando.Parameters.AddWithValue("@CPF", cpf);
+                comando.ExecuteNonQuery();
+
+                MessageBox.Show("Usuário cadastrado com sucesso!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
             finally
             {
                 conexao.Close();
                 Console.WriteLine("Finalizado.");
             }
-
-            return consulta;
         }
-        
     }
 }

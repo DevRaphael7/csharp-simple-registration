@@ -20,27 +20,21 @@ namespace csharp_simple_registration
             InitializeComponent();
         }
 
+        private void tela_Cadastro(object sender, EventArgs e)
+        {
+            new Form2().Show();
+        }
+
         private void login_Click(object sender, EventArgs e)
         {
             data.db = dab;
-            
+            data.query = "SELECT * FROM usuario WHERE Nome = @nome and Senha = @senha;";
+
+
             nome = txtNome.Text;
             senha = txtSenha.Text;
 
-            bool conn = data.buscaPeloBancoDeDados("SELECT * FROM usuario;", nome, senha);
-
-            if (conn)
-            {
-                MessageBox.Show("Conexão realizada com sucesso!", "Parabéns!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else if(nome != "" & senha != "")
-            {
-                MessageBox.Show("Usuário não existe ou o nome ou a senha estão errados", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                MessageBox.Show("Digite alguma coisa!", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+            data.buscaPeloBancoDeDados(nome, senha);
         }
     }
 }

@@ -73,6 +73,7 @@ namespace csharp_simple_registration
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(126)))), ((int)(((byte)(246)))));
             this.label2.Location = new System.Drawing.Point(96, 477);
@@ -80,6 +81,7 @@ namespace csharp_simple_registration
             this.label2.Size = new System.Drawing.Size(153, 21);
             this.label2.TabIndex = 20;
             this.label2.Text = "Não é cadastrado?";
+            this.label2.Click += new System.EventHandler(this.tela_Cadastro);
             // 
             // panel2
             // 
