@@ -14,17 +14,8 @@ namespace csharp_simple_registration
         private string senha;
         private string cpf;
 
-        public void setNome(String nome)
-        {
-            if (nome.Length <= 1)
-            {
-                MessageBox.Show("Nome inválido", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else
-            {
-                this.nome = nome;
-            }
-        }
+        public void setNome(String nome) => this.nome = nome;
+        
 
         public void setSenha(String senha)
         {
@@ -53,6 +44,8 @@ namespace csharp_simple_registration
         public String getNome() => this.nome;
         public String getSenha() => this.senha;
         public String getCpf() => this.cpf;
+
+
 
     }
 }
