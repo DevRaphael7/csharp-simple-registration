@@ -39,6 +39,7 @@ namespace csharp_simple_registration
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.buttonHideShow = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,7 +52,7 @@ namespace csharp_simple_registration
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(40, 412);
+            this.button1.Location = new System.Drawing.Point(40, 441);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(273, 38);
             this.button1.TabIndex = 22;
@@ -64,7 +65,7 @@ namespace csharp_simple_registration
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Share-BoldOSF", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(126)))), ((int)(((byte)(246)))));
-            this.label3.Location = new System.Drawing.Point(140, 219);
+            this.label3.Location = new System.Drawing.Point(140, 211);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(74, 30);
             this.label3.TabIndex = 21;
@@ -76,7 +77,7 @@ namespace csharp_simple_registration
             this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(126)))), ((int)(((byte)(246)))));
-            this.label2.Location = new System.Drawing.Point(96, 477);
+            this.label2.Location = new System.Drawing.Point(96, 506);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(153, 21);
             this.label2.TabIndex = 20;
@@ -86,7 +87,7 @@ namespace csharp_simple_registration
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(126)))), ((int)(((byte)(246)))));
-            this.panel2.Location = new System.Drawing.Point(40, 383);
+            this.panel2.Location = new System.Drawing.Point(40, 375);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(275, 1);
             this.panel2.TabIndex = 19;
@@ -96,7 +97,7 @@ namespace csharp_simple_registration
             this.txtSenha.BackColor = System.Drawing.Color.White;
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSenha.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSenha.Location = new System.Drawing.Point(87, 355);
+            this.txtSenha.Location = new System.Drawing.Point(87, 347);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.Size = new System.Drawing.Size(226, 21);
             this.txtSenha.TabIndex = 18;
@@ -104,7 +105,7 @@ namespace csharp_simple_registration
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(126)))), ((int)(((byte)(246)))));
-            this.panel1.Location = new System.Drawing.Point(40, 308);
+            this.panel1.Location = new System.Drawing.Point(40, 300);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(275, 1);
             this.panel1.TabIndex = 16;
@@ -114,7 +115,7 @@ namespace csharp_simple_registration
             this.txtNome.BackColor = System.Drawing.Color.White;
             this.txtNome.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNome.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(87, 280);
+            this.txtNome.Location = new System.Drawing.Point(87, 272);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(226, 21);
             this.txtNome.TabIndex = 15;
@@ -122,7 +123,7 @@ namespace csharp_simple_registration
             // pictureBox3
             // 
             this.pictureBox3.Image = global::csharp_simple_registration.Properties.Resources._314692_lock_icon;
-            this.pictureBox3.Location = new System.Drawing.Point(40, 333);
+            this.pictureBox3.Location = new System.Drawing.Point(40, 325);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(41, 43);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,7 +133,7 @@ namespace csharp_simple_registration
             // pictureBox2
             // 
             this.pictureBox2.Image = global::csharp_simple_registration.Properties.Resources.Usuario_cadastro;
-            this.pictureBox2.Location = new System.Drawing.Point(40, 258);
+            this.pictureBox2.Location = new System.Drawing.Point(40, 250);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(41, 43);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,10 +145,25 @@ namespace csharp_simple_registration
             this.pictureBox1.Image = global::csharp_simple_registration.Properties.Resources.Foto_para_cadastro;
             this.pictureBox1.Location = new System.Drawing.Point(76, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(210, 192);
+            this.pictureBox1.Size = new System.Drawing.Size(210, 172);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
+            // 
+            // buttonHideShow
+            // 
+            this.buttonHideShow.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(126)))), ((int)(((byte)(246)))));
+            this.buttonHideShow.FlatAppearance.BorderSize = 2;
+            this.buttonHideShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHideShow.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHideShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(126)))), ((int)(((byte)(246)))));
+            this.buttonHideShow.Location = new System.Drawing.Point(254, 403);
+            this.buttonHideShow.Name = "buttonHideShow";
+            this.buttonHideShow.Size = new System.Drawing.Size(61, 32);
+            this.buttonHideShow.TabIndex = 51;
+            this.buttonHideShow.Text = "SHOW";
+            this.buttonHideShow.UseVisualStyleBackColor = true;
+            this.buttonHideShow.Click += new System.EventHandler(this.ocultarSenha);
             // 
             // Form1
             // 
@@ -155,6 +171,7 @@ namespace csharp_simple_registration
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(364, 536);
+            this.Controls.Add(this.buttonHideShow);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -169,6 +186,7 @@ namespace csharp_simple_registration
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -189,6 +207,7 @@ namespace csharp_simple_registration
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button buttonHideShow;
     }
 }
 

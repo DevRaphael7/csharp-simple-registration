@@ -43,6 +43,7 @@ namespace csharp_simple_registration
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.txtConfSenha = new System.Windows.Forms.TextBox();
             this.txtCPF = new System.Windows.Forms.TextBox();
+            this.buttonHideShow = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label3
@@ -135,9 +136,9 @@ namespace csharp_simple_registration
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(25, 416);
+            this.button1.Location = new System.Drawing.Point(25, 450);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(306, 38);
+            this.button1.Size = new System.Drawing.Size(308, 38);
             this.button1.TabIndex = 45;
             this.button1.Text = "Cadastrar";
             this.button1.UseVisualStyleBackColor = false;
@@ -179,6 +180,21 @@ namespace csharp_simple_registration
             this.txtCPF.Size = new System.Drawing.Size(308, 21);
             this.txtCPF.TabIndex = 49;
             // 
+            // buttonHideShow
+            // 
+            this.buttonHideShow.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(126)))), ((int)(((byte)(246)))));
+            this.buttonHideShow.FlatAppearance.BorderSize = 2;
+            this.buttonHideShow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonHideShow.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonHideShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(126)))), ((int)(((byte)(246)))));
+            this.buttonHideShow.Location = new System.Drawing.Point(272, 403);
+            this.buttonHideShow.Name = "buttonHideShow";
+            this.buttonHideShow.Size = new System.Drawing.Size(61, 32);
+            this.buttonHideShow.TabIndex = 50;
+            this.buttonHideShow.Text = "SHOW";
+            this.buttonHideShow.UseVisualStyleBackColor = true;
+            this.buttonHideShow.Click += new System.EventHandler(this.hidePassword);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -186,6 +202,7 @@ namespace csharp_simple_registration
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(364, 536);
+            this.Controls.Add(this.buttonHideShow);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtConfSenha);
             this.Controls.Add(this.txtSenha);
@@ -226,5 +243,6 @@ namespace csharp_simple_registration
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.TextBox txtConfSenha;
         private System.Windows.Forms.TextBox txtCPF;
+        private System.Windows.Forms.Button buttonHideShow;
     }
 }

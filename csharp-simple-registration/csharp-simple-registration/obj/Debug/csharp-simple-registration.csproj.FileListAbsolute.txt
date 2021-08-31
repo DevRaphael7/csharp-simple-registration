@@ -32,3 +32,4 @@ F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-sim
 F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\bin\Debug\System.Numerics.Vectors.xml
 F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\obj\Debug\csharp-simple-registration.csproj.CopyComplete
+F:\Repositorios\csharp-simple-registration\csharp-simple-registration\csharp-simple-registration\obj\Debug\csharp_simple_registration.Form3.resources

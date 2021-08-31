@@ -15,6 +15,7 @@ namespace csharp_simple_registration
         String nome, senha;
         String dab = "server=localhost;user=raphael;database=c_lan;port=3306;password=159357456852DB$;";
         ConexaoDB data = new ConexaoDB();
+        Usuario user = new Usuario();
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +24,18 @@ namespace csharp_simple_registration
         private void tela_Cadastro(object sender, EventArgs e)
         {
             new Form2().Show();
+        }
+
+        private void ocultarSenha(object sender, EventArgs e)
+        {
+            buttonHideShow.Text = buttonHideShow.Text == "SHOW" ? "HIDE" : "SHOW";
+            txtSenha.PasswordChar = user.senhaAsterisco(buttonHideShow.Text);
+           
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            txtSenha.PasswordChar = user.senhaAsterisco(buttonHideShow.Text);
         }
 
         private void login_Click(object sender, EventArgs e)
