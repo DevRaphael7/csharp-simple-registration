@@ -13,7 +13,7 @@ namespace csharp_simple_registration
         private string nome;
         private string senha;
         private string cpf;
-        private bool val;
+        private bool val = false;
 
         public void setNome(String nome) => this.nome = nome;
         
@@ -26,11 +26,7 @@ namespace csharp_simple_registration
                 this.senha = senha;
                 val = true;
             }
-            else
-            {
-                this.senha = senha;
-                val = false;
-            }
+            else this.senha = senha;
         }
 
         public void setCpf(String cpf)
@@ -40,26 +36,15 @@ namespace csharp_simple_registration
                 MessageBox.Show("O CPF deve possuir 11 caracteres", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 val = true;
             }
-            else
-            {
-                this.cpf = cpf;
-                val = false;
-            }
+            else this.cpf = cpf;
         }
 
         public String getNome() => this.nome;
         public String getSenha() => this.senha;
         public String getCpf() => this.cpf;
 
-        public bool validarCadastro()
-        {
-            if (val == true)
-            {
-                return false;
-            }
-            return true;
-        }
-
+        public bool validarCadastro() => val;
+        
         public char senhaAsterisco(string textButton)
         {
             char visibility = ' ';

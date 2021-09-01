@@ -12,8 +12,7 @@ namespace csharp_simple_registration
 {
     public partial class Form2 : Form
     {
-        string confirmarSenha;
-        String dab = "server=localhost;user=raphael;database=c_lan;port=3306;password=159357456852DB$;";
+        string confirmarSenha, dab = "server=localhost;user=raphael;database=c_lan;port=3306;password=159357456852DB$;";
         Usuario user = new Usuario();
         ConexaoDB database = new ConexaoDB();
 
@@ -25,25 +24,16 @@ namespace csharp_simple_registration
             confirmarSenha = txtConfSenha.Text;
             user.setCpf(txtCPF.Text);
 
-            if (user.getSenha() != confirmarSenha)
-            {
-                MessageBox.Show("Senhas diferentes!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            else if (user.getNome() == "" || user.getSenha() == "" || user.getCpf() == "")
-            {
-                MessageBox.Show("Os campos estão vazios", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            if (user.getSenha() != confirmarSenha) MessageBox.Show("Senhas diferentes!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else if (user.getNome() == "" || user.getSenha() == "" || user.getCpf() == "") MessageBox.Show("Os campos estão vazios", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if(user.validarCadastro())
             {
                 database.query = "INSERT INTO usuario (nome, senha, cpf) VALUES (@NOME, @SENHA, @CPF);";
                 database.inserirNovosRegistros(user.getNome(), user.getSenha(), user.getCpf());
             }
         }
-        public Form2()
-        {
-            InitializeComponent();
-        }
-
+        public Form2() => InitializeComponent();
+        
         private void hidePassword(object sender, EventArgs e)
         {
             buttonHideShow.Text = buttonHideShow.Text == "SHOW" ? "HIDE" : "SHOW";
