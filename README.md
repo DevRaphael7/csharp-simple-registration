@@ -1,5 +1,6 @@
 # Aplicativo simples de cadastro e login com c# 🎓 
-![ C# ](csharp-simple-registration\images\300ppi\c-sharp.png "C#")
+<img src="csharp-simple-registration\images\300ppi\c-sharp.png" alt="C#">
+
 ## Scripts SQL:
 
 ``` sql
@@ -185,7 +186,6 @@ A classe ConexaoDB é onde realizo a conexão com o banco de dados.
 
 ## INTERFACE GRÁFICA
 
-![Interface gráfica](csharp-simple-registration\images\300ppi\GUI.png "Interface gráfica")
-
+<img src="csharp-simple-registration\images\300ppi\GUI.png" alt="Interface gráfica">
 
 
