@@ -13,7 +13,7 @@ namespace csharp_simple_registration
         private string nome;
         private string senha;
         private string cpf;
-        private bool val = false;
+        private bool val;
 
         public void setNome(String nome) => this.nome = nome;
         
@@ -45,22 +45,25 @@ namespace csharp_simple_registration
 
         public bool validarCadastro() => this.val;
         
+        public bool camposVazios()
+        {
+            bool empty = senha != " " && nome != " " && cpf != " " ? true : false;
+            return empty;
+        }
         public char senhaAsterisco(string textButton)
         {
             char visibility = ' ';
-            if (textButton == "SHOW")
-            {
-                visibility = '*';
-                textButton = "HIDE";
-            }
-            else
-            {
-                visibility = '\0';
-                textButton = "SHOW";
-            }
-
+            visibility = textButton == "SHOW" ? '*' : '\0';
+            textButton = visibility == '*' ? "HIDE" : "SHOW";
             return visibility;
         }
 
+        public Usuario()
+        {
+            this.senha = " ";
+            this.nome = " ";
+            this.cpf = " ";
+            this.val = false;
+        }
     }
 }
