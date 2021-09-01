@@ -16,13 +16,8 @@ namespace csharp_simple_registration
         public string query;
         public string db;
 
-
-        private void conexaoComDB()
-        {
-           conexao = new MySqlConnection(this.db);
-        }
-
-
+        private void conexaoComDB() => conexao = new MySqlConnection(this.db);
+        
         public void buscaPeloBancoDeDados(string nome, string senha)
         {
             try
@@ -47,11 +42,7 @@ namespace csharp_simple_registration
                     }
                 }
 
-                if(temporario == false)
-                {
-                    MessageBox.Show("E-mail ou senha errados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-
+                if(temporario == false) MessageBox.Show("E-mail ou senha errados", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 reader.Close();
             }
             catch (Exception ex)

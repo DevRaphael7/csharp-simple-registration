@@ -26,7 +26,7 @@ namespace csharp_simple_registration
 
             if (user.getSenha() != confirmarSenha) MessageBox.Show("Senhas diferentes!", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
             else if (user.getNome() == "" || user.getSenha() == "" || user.getCpf() == "") MessageBox.Show("Os campos estão vazios", "", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else if(user.validarCadastro())
+            else if(!user.validarCadastro())
             {
                 database.query = "INSERT INTO usuario (nome, senha, cpf) VALUES (@NOME, @SENHA, @CPF);";
                 database.inserirNovosRegistros(user.getNome(), user.getSenha(), user.getCpf());

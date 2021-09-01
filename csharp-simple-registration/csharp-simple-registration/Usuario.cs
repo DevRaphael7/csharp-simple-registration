@@ -43,7 +43,7 @@ namespace csharp_simple_registration
         public String getSenha() => this.senha;
         public String getCpf() => this.cpf;
 
-        public bool validarCadastro() => val;
+        public bool validarCadastro() => this.val;
         
         public char senhaAsterisco(string textButton)
         {
@@ -61,5 +61,6 @@ namespace csharp_simple_registration
 
             return visibility;
         }
+
     }
 }
